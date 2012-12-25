@@ -1,0 +1,47 @@
+
+#calculator
+{
+	display:none;
+	width:200px;
+	margin-top:100px;
+	margin-bottom:100px;
+	padding:10px;
+	border-style:double;
+	border-width:1px;
+	border-color:black;
+	margin-left:40%;
+	background-color:brown;
+
+}
+
+input.button
+{
+	height:50px;
+	width:50px;
+	border-style:outset;
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+}
+
+#ce,#clear
+{
+	color:red;
+}
+
+#input,#screen
+{
+	width:190px;
+	text-align:right;
+	color:black;
+}
+
+#screen
+{
+	
+	background-color:yellow;
+	font-weight:bolder;
+	border-width:1px;
+	border-style:groove;
+	border-color:black;
+}

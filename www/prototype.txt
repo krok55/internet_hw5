@@ -1,0 +1,11 @@
+Question 2:
+===========
+
+The differences between Javascript prototypes and Java inheritance:
+1. With prototypes one can alter parent's behaviour dynamically, while in Java, once the object is created there is no way to change it's inherited properties or methods.
+2. In java, when a new instance of the child class is created, a new space for the parent's object also allocated. In javascript, that is not necessary the case: An prototype of the child object
+may be refferenced dymanically to another (already existing) object.
+3. Furthermore, all public methods assigned to a prototype allocated only once for all child objects to be inherited with that prototype.
+4. Unlike Java, there is no way to add a "protected" privacy level for object members or methods.
+5. In Java, concepts like "super", parent constructor, "pure classes" are natively defined in the language, while in Javascript they must be emulated.
+6. In Java, the compiler validates inheritance relationship. In Javascript - not.

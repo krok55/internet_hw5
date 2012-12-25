@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<title> Profile (Ex3) </title>
+		<LINK href="profile.css" rel="stylesheet" type="text/css">
+		<LINK href="calculator.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+
+		<script src="calculator.js"></script>
+		<script type="text/javascript">
+		//<![CDATA[
+			var calc = null;
+			var x = 0;
+			function changePicture() {
+				x = 1 - x;
+				var avatar = document.getElementById("avatar").src = "profile"+x+".jpg";
+			}
+			
+			function verify() {		
+				var uName = document.getElementById('username').value;
+				var pass = document.getElementById('password').value;
+				if(uName === "admin" && pass === "admin")
+					calc = (loadCalculator());	
+				
+				// clear the fields
+				document.getElementById('username').value = "";
+				document.getElementById('password').value = "";
+				
+				
+			}
+			
+			function loadCalculator() {
+				var calc  = new Calculator(document.getElementById('input'),document.getElementById('screen'));
+				document.getElementById('content').style.display = 'none';
+				document.getElementById('footer').style.display = 'none';
+				document.getElementById('calculator').style.display = 'block';
+				return calc;
+			}
+		//]]>
+		</script>
+		
+		
+		<div id="page">
+			<div id="header">
+				<form class="login">
+					Password: <input id="password" class="login" type="password"/>  Username: <input class="login" id="username"/> 
+					<input class="login" id="send" type="button" value="Send" onClick="verify()"/>
+				</form>
+			</div>
+			<div id="content">
+				<img id="avatar" src="profile1.jpg" width="200px" height="300px" onClick="changePicture()"/>
+				<span id="name">
+					Leonid , <b>Trainer</b><br/>
+					306781139
+				</span>
+				<span id="about">
+					<p>
+						Welcome to my personal website... <br/>
+						This is a first paragraph with dummy data about myself <br/>
+						Here, I could probabely write about my CV and academic achievments <br/>						
+					</p>
+					<p>
+						This is a second paragraph about myself </br>
+						Here, I could write about my hobbies, interests and what I love to do at my free time (that I don't have)... </br>
+						And of course about how much I love Internet Technologies course at HUJI (67555) :-)
+					</p>
+				</span>
+				<center>
+					<table class="links">
+						<tr>
+							<th class="links">Link</th>
+							<th class="links">Description</th>
+						</tr>
+							<td class="links"><a href="http://www.google.com">Google</a></td>
+							<td class="links">My journey always starts here...</td>
+						<tr>
+							<td class="links"><a href="http://moodle.cs.huji.ac.il/cs12/mod/assignment/view.php?id=1903">Ex2</a></td>
+							<td class="links">The instructions are always here...</td>
+						</tr>
+						<tr>
+							<td class="links"><a href="http://moodle.cs.huji.ac.il/cs12/mod/forum/view.php?id=1833">Students forum</a></td>
+							<td class="links">One can find here very usefull information...</td>
+						</tr>
+						
+					</table>
+				</center>
+			</div>
+			<div id="footer">
+				Can't think of anything amusing on CSS... maybe later...
+			</div>
+			
+			
+			<div id="calculator">
+				<center>
+					<div class="calculator" id="screen">0</div>
+					<input class="calculator" id="input" value="" onkeyup="calc.parseKey(event)"/><br/>
+					<input class="calculator button" id="number1" type="button" value="1" onClick="calc.addNumber(1)"/><input class="calculator button" id="number2" type="button" value="2" onClick="calc.addNumber(2)"/><input class="calculator button" id="number3" type="button" value="3" onClick="calc.addNumber(3)"/><input class="calculator button" id="add" type="button" value="+" onClick="calc.add(calc.input.value)"/><br />
+					<input class="calculator button" id="number4" type="button" value="4" onClick="calc.addNumber(4)"/><input class="calculator button" id="number5" type="button" value="5" onClick="calc.addNumber(5)"/><input class="calculator button" id="number6" type="button" value="6" onClick="calc.addNumber(6)"/><input class="calculator button" id="sub" type="button" value="-" onClick="calc.substruct(calc.input.value)"/><br />
+					<input class="calculator button" id="number7" type="button" value="7" onClick="calc.addNumber(7)"/><input class="calculator button" id="number8" type="button" value="8" onClick="calc.addNumber(8)"/><input class="calculator button" id="number9" type="button" value="9" onClick="calc.addNumber(9)"/><input class="calculator button" id="mul" type="button" value="*" onClick="calc.multiply(calc.input.value)"/><br />
+					<input class="calculator button" id="ce" type="button" value="CE" onClick="calc.clearInput()"/><input class="calculator button" id="number0" type="button" value="0" onClick="calc.addNumber(0)"/><input class="calculator button" id="clear" type="button" value="C" onClick="calc.clear()"/><input class="calculator button" id="div" type="button" value="/" onClick="calc.divide(calc.input.value)"//><br />
+				</center>
+			</div>
+		</div>
+	</body>
+
+
+</html>

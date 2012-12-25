@@ -1,0 +1,104 @@
+	#page
+	{
+		margin-left: 15em;
+		margin-right: 15em;
+		border-style:ridge;
+		border-width:5px;
+		border-color:lightblue;
+		background-color:#3399ff;
+		color:white;
+		min-width:50em;
+		
+	}
+	#header
+	{
+		padding: 1em;
+		text-align:right;
+		border-style:solid;
+		border-width:1px;
+		border-color:white;
+	}
+	#content
+	{
+		border-style:solid;
+		border-width:1px;
+		border-color:white;
+		padding:2.1em;
+		//padding-right:2.1em;
+		//padding-top:2.1em;
+		
+	}
+	#footer
+	{
+		border-style:solid;
+		border-width:1px;
+		border-color:white;
+		padding:2em;
+		
+	}
+	#avatar
+	{
+		height:300px;
+		width:300px;
+		float:right;
+		margin-left:1em;
+		margin-bottom:1em;
+		/* couldn't find a simple way to rotate the image in the tutorials - so I Googled up this solution */
+		/* source: http://www.frontendwebhelp.com/html-css-tips-tricks/rotating-images.php */
+		/* in CSS3 there should be a simple "rotate" property for that purpose, but unfortunately it is not supported on Chrome yet */
+		-moz-transform: rotate(15deg); 
+		-webkit-transform: rotate(15deg); 
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', 
+		M11=0.9659258262, M12=-0.2588190451, 
+		M21=0.2588190451, M22=0.9659258262); 
+	}
+	#name
+	{
+		font-size:50px;
+		text-decoration:underline;
+	}
+	#about
+	{
+		font-size:24px;
+		text-decoration:none;
+	}
+	table.links
+	{
+		border-style:double;
+		border-width:1px;
+		position:relative;
+		width:40em;
+		text-align:center;
+		border-color:blue;
+		
+	}
+	
+	td,th.links
+	{
+		border-style:double;
+		border-width:1px;
+	}
+	
+	th.links
+	{
+		background-color:blue;
+	}
+	
+	
+	.login
+	{
+		color:black;
+		border-color:black;
+	}
+	
+	#send
+	{
+		border-style:solid;
+		border-color:white;
+		border-width:2px;
+		color:white;
+		background-color:blue;
+		width:6em;
+		border-radius:15%;
+		
+	}

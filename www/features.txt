@@ -1,0 +1,4 @@
+1. Clousers: in javascript each function allocates an object for keeping all local variables in its context. This is similar to 'static' members in java, though this is less powerfull. (there is no parent-relationship between contexts)
+2. In Javascript, the behaviour of the object can be altered dynamically (adding / removing / changing) all public variables and privilleged methods in run-time. 
+3. Unlike Java, Javascript is a weak-typing language (each variable can hold absolutely everything)
+4. Unlike Java, Javascript is a dynamic-typing language (the inheritance-relationship is not enforced in compile-time)
